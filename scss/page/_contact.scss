@@ -1,0 +1,17 @@
+@use '../global' as *;
+
+.contact {
+    padding: rem(100) 0;
+
+    @include mq(md) {
+        padding-top: rem(97);
+    }
+}
+
+.contact__inner {
+    max-width: 650px;
+}
+
+.contact__form {
+    margin-top: rem(52);
+}

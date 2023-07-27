@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+.footer {
+    padding: rem(31);
+    background-color: $blue2;
+    text-align: center;
+
+    @include mq(md) {
+        padding: rem(22);
+    }
+}
+
+.footer__copyright {
+    font-size: rem(14);
+    line-height: calc(19 / 14);
+    letter-spacing: 0.05em;
+    color: $white;
+    font-weight: $regular;
+}

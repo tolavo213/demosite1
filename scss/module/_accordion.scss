@@ -1,0 +1,100 @@
+@use '../global' as *;
+
+.accordion {
+    width: 100%;
+}
+
+.accordion__item:not(:first-child) {
+    margin-top: rem(10);
+
+    @include mq(md) {
+        margin-top: rem(8);
+    }
+}
+
+.accordion__title {
+    position: relative;
+    padding: rem(21) rem(50) rem(21) rem(20);
+    cursor: pointer;
+    background-color: $blue;
+
+    @include mq(md) {
+        padding: rem(20) rem(35) rem(20) rem(10);
+
+    }
+}
+
+// プラスマイナス
+.accordion__title::before,
+.accordion__title::after {
+    position: absolute;
+    top: rem(31);
+    right: rem(21);
+    width: rem(18);
+    height: rem(2);
+    content: "";
+    background-color: $white;
+    transition: .3s transform, .3s opacity;
+
+    @include mq(md) {
+        right: rem(12);
+        width: rem(16);
+    }
+}
+
+// プラスの縦棒
+.accordion__title::before {
+    transform: rotate(90deg);
+}
+
+
+//プラスマイナスの切り替え
+.accordion__title.is-open::before {
+    transform: rotate(180deg);
+}
+
+.accordion__title.is-open::after {
+    opacity: 0;
+}
+
+
+
+.accordion__title-text {
+    font-size: rem(15);
+    letter-spacing: 0.05em;
+    color: $white;
+
+    //２行目以降の文字を揃えるため
+    padding-left: 1em;
+    text-indent: -1em;
+
+    @include mq(md) {
+        font-size: rem(14);
+        line-height: calc(26 / 14);
+    }
+}
+
+.accordion__content {
+    display: none; //閉じた状態
+    padding: rem(21) rem(20);
+
+    @include mq(md) {
+        padding: rem(16) rem(10) rem(24);
+    }
+}
+
+.accordion__text {
+    font-size: rem(15);
+    line-height: calc(28 / 15);
+    letter-spacing: 0.05em;
+    color: $black;
+
+    //２行目以降の文字を揃えるため
+    padding-left: 1em;
+    text-indent: -1em;
+
+    @include mq(md) {
+        font-size: rem(14);
+        line-height: calc(26 / 14);
+    }
+}

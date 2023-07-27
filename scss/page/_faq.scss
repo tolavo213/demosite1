@@ -1,0 +1,38 @@
+@use '../global' as *;
+
+.faq {
+    padding-top: rem(105);
+    background-color: $gray;
+}
+
+.faq__title {
+    text-transform: uppercase;
+}
+
+.faq__accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: rem(50) auto 0;
+
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.faq__img {
+    margin-top: rem(90);
+    width: 100%;
+
+    @include mq(md) {
+        margin-top: rem(100);
+    }
+}
+
+.faq__img img {
+    aspect-ratio: 1440 / 480;
+    width: 100%;
+    object-fit: cover;
+    @include mq(md){
+        aspect-ratio: 375 / 280;
+    }
+}

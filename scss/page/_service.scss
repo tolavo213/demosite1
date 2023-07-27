@@ -1,0 +1,68 @@
+@use '../global' as *;
+
+.service {
+    padding: rem(100) 0;
+    background-color: $gray;
+}
+
+.service__container {
+    margin-top: rem(50);
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    grid-template-columns: repeat(2, rem(400));
+    grid-template-rows: repeat(2, rem(400));
+
+
+    @include mq(md) {
+        margin-top: rem(40);
+        grid-template-columns: repeat(1, rem(345));
+        grid-template-rows: repeat(4, rem(345));
+    }
+
+}
+
+.service__item {
+    width: 100%;
+    height: 100%;
+}
+
+.service__item:nth-child(2) {
+    @include mq("md") {
+        grid-row: 1 / 2;
+    }
+}
+
+.service__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $red;
+    text-align: center;
+    outline: 2px solid $white;
+    outline-offset: -7px;
+}
+
+.service__body.service__body--green {
+    background-color: $green;
+}
+
+.service__sub-title,
+.service__text {
+    color: $white;
+}
+
+.service__text {
+    margin-top: rem(29);
+    width: calc(220 / 400 * 100%);
+
+    @include mq(md) {
+        margin-top: rem(34);
+        width: calc(293 / 360 * 100%);
+    }
+}

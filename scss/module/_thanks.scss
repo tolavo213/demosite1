@@ -1,0 +1,15 @@
+@use '../global' as *;
+
+.thanks {
+    padding: rem(200) 0;
+
+}
+
+.thanks__text {
+    text-align: center;
+}
+
+.thanks__button {
+    margin-top: rem(20);
+    text-align: center;
+}

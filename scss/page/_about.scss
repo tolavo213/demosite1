@@ -1,0 +1,42 @@
+@use '../global' as *;
+
+.about {
+    padding: rem(100) 0;
+}
+
+.about__inner {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about__body {
+    flex: 1;
+}
+
+.about__sub-title {
+    margin-top: rem(39);
+
+    @include mq(md) {
+        margin-top: rem(33);
+    }
+}
+
+.about__text {
+    margin-top: rem(34);
+
+    @include mq(md) {
+        margin-top: rem(30);
+    }
+}
+
+
+.about__img {
+    width: rem(460);
+    margin-left: rem(30);
+}
+
+.about__img img {
+    aspect-ratio: 460 / 320;
+    width: 100%;
+    object-fit: cover;
+}

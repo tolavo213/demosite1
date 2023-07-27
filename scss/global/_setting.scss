@@ -1,0 +1,21 @@
+@use 'sass:math';
+
+// インナー幅設定(pxのまま)
+$inner: 1030px;
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 15px;
+
+// font-family
+$base-font: "Roboto", 'Noto Sans JP', sans-serif;
+
+// font-weight
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+body {
+  font-family: $base-font;
+  font-weight: $medium;
+}

@@ -1,0 +1,19 @@
+@use '../global' as *;
+
+.button {
+    font-size: rem(20);
+    letter-spacing: 0.05em;
+    width: rem(235);
+    display: inline-block;
+    padding: rem(15);
+    background-color: $red;
+    color: $white;
+    box-shadow: 2px 2px 4px rgba($color: $gray, $alpha: 0.5);
+    transition: .3s background-color, .3s box-shadow;
+
+    &:hover {
+        opacity: 1;
+        background-color: $red2;
+        box-shadow: none;
+    }
+}

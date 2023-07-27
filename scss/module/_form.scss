@@ -1,0 +1,63 @@
+@use '../global' as *;
+
+.form__item:not(:first-child) {
+    margin-top: rem(20);
+
+    @include mq(md) {
+        margin-top: rem(26);
+    }
+}
+
+.form__label-text {
+    font-size: rem(15);
+    line-height: calc(15 / 15);
+    letter-spacing: 0.05em;
+    color: $black;
+
+    @include mq(md) {
+        font-size: rem(14);
+    }
+}
+
+.form__input {
+    margin-top: rem(6);
+
+    @include mq(md) {
+        margin-top: rem(4);
+    }
+}
+
+.form__input-text,
+.form__textarea {
+    font-size: rem(15);
+    line-height: calc(30 / 15);
+    letter-spacing: 0.05em;
+    font-weight: $regular;
+    padding: rem(10);
+    width: 100%;
+    background-color: $gray;
+
+    @include mq(md) {
+        font-size: rem(14);
+    }
+}
+
+.form__input-text::placeholder,
+.form__textarea::placeholder {
+    opacity: 0.5;
+    color: $gray2;
+}
+
+.form__textarea {
+    height: rem(171);
+    resize: none; //右下でリサイズできなくさせる
+}
+
+.form__button {
+    margin-top: rem(50);
+    text-align: center;
+
+    @include mq(md) {
+        margin-top: rem(48);
+    }
+}

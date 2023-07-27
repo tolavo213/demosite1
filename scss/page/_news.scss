@@ -1,0 +1,25 @@
+@use '../global' as *;
+
+.news{
+    padding: rem(100) 0 rem(166);
+    @include mq(md){
+        padding: rem(100) 0 rem(100);
+    }
+}
+
+.news__cards{
+    margin-top: rem(52);
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
+    gap: rem(35);
+    @include mq(md){
+        margin-top: rem(42);
+        margin-left: rem(13);
+        margin-right: rem(12);
+        gap: rem(30);
+    }
+}
+
+
+

@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+// 色指定
+$white: #fff;
+$black: #141414;
+$red: #F14E53;
+$red2: #C85054;
+$green: #20AAA5;
+$gray: #F7F7F7;
+$gray2: #868686;
+$blue: #155B98;
+$blue2: #202F43;
+
+body {
+  color: $black;
+}

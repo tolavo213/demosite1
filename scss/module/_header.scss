@@ -1,0 +1,77 @@
+@use "../global" as *;
+
+.header {
+    width: 100%;
+    height: rem(75);
+    position: fixed;
+    z-index: 1000;
+}
+
+.header__inner {
+    width: inherit;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.header__logo {
+    width: rem(171);
+    height: inherit;
+    margin-left: rem(22);
+
+    @include mq(md) {
+        width: rem(132);
+    }
+}
+
+.header__logo a {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    width: 100%;
+}
+
+.header__logo a img {
+    aspect-ratio: 171 / 30;
+    width: 100%;
+    object-fit: cover;
+}
+
+.header__nav {
+    margin-left: auto;
+    height: inherit;
+}
+
+.header-nav__items {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+
+.header-nav__item {
+    height: inherit;
+}
+
+.header-nav__item:not(:first-child) {
+    margin-left: rem(70);
+}
+
+.header-nav__link {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    font-size: rem(16);
+    line-height: calc(21/ 16);
+    letter-spacing: 0.05em;
+}
+
+.header-nav__link.header-nav__link--contact {
+    color: $white;
+    background-color: $red;
+    padding-right: rem(24);
+    padding-left: rem(24);
+}

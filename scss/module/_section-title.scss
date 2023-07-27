@@ -1,0 +1,25 @@
+@use '../global' as *;
+
+.section-title--center {
+    text-align: center;
+}
+
+.section-title__main {
+    font-size: rem(36);
+    line-height: calc(48 / 36);
+    letter-spacing: 0.05em;
+    color: $black;
+}
+
+.section-title__sub {
+    margin-top: rem(5);
+    font-size: rem(12);
+    line-height: calc(12 / 12);
+    letter-spacing: 0.05em;
+    color: $red;
+
+    @include mq(md) {
+        margin-top: rem(7);
+        font-size: rem(10);
+    }
+}
